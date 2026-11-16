@@ -1,188 +1,782 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <meta name="theme-color" content="#4394ff">
-  <meta name="author" content="진담중국어">
-  <meta name="copyright" content="© 2026 진담중국어. All rights reserved.">
-  <meta name="description" content="HSK 3.0 5급 필수 어휘 1600개와 진담중국어 짝꿍어휘를 휴대폰에서 넘기며 익히는 단어장">
-  <title>진담 짝꿍어휘 단어장 · HSK 5급</title>
-  <!-- 홈 화면 아이콘: 진담중국어 무화과 짝꿍 (브라우저와 같은 기록을 쓰도록 display: browser) -->
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="apple-mobile-web-app-title" content="진담 HSK5">
-  <!-- 카카오톡·SNS로 링크를 보냈을 때 보이는 미리보기 -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="진담중국어">
-  <meta property="og:title" content="진담 짝꿍어휘 단어장 · HSK 5급 | 진담중국어">
-  <meta property="og:description" content="HSK 3.0 필수 어휘 1600개, 단어마다 짝꿍어휘 3개. 덩어리로 익히면, 중국어가 툭!">
-  <meta property="og:url" content="https://jindam1799.github.io/jindam_hsk3.0_dapei_H5/">
-  <meta property="og:image" content="https://jindam1799.github.io/jindam_hsk3.0_dapei_H5/og-fig.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="진담 짝꿍어휘 단어장 HSK 5급 — 무화과 짝꿍과 表达 짝꿍어휘 카드">
-  <meta name="twitter:card" content="summary_large_image">
-  <script src="inapp.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#4394ff">
+<meta name="author" content="진담중국어">
+<meta name="copyright" content="© 2026 진담중국어. All rights reserved.">
+<meta name="description" content="《단어가 말로 이어지는 HSK 5급 짝꿍어휘》 모바일&PC 단어장 · 책과 같은 쪽으로 펼쳐요 · 진담중국어">
+<!-- 홈 화면 아이콘: 진담중국어 무화과 짝꿍 (브라우저와 같은 기록을 쓰도록 display: browser) -->
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="진담 HSK5">
+<!-- 카카오톡·SNS로 링크를 보냈을 때 보이는 미리보기 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="진담중국어">
+<meta property="og:title" content="진담 짝꿍어휘 단어장 · HSK 5급 | 진담중국어">
+<meta property="og:description" content="책과 같은 쪽으로 펼치는 모바일 단어장 · HSK 3.0 필수 어휘 1600개, 단어마다 짝꿍어휘 3개. 덩어리로 익히면, 중국어가 툭!">
+<meta property="og:url" content="https://jindam1799.github.io/jindam_hsk3.0_dapei_H5/">
+<meta property="og:image" content="https://jindam1799.github.io/jindam_hsk3.0_dapei_H5/og-fig.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="진담 짝꿍어휘 단어장 HSK 5급 — 무화과 짝꿍과 表达 짝꿍어휘 카드">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+/* 카카오톡·인스타그램 등 앱 안 브라우저 → 크롬으로 열기 */
+(function(){
+  var ua=navigator.userAgent||'',url=location.href.split('#')[0];
+  var inapp=/KAKAOTALK|Instagram|FBAN|FBAV|FB_IAB|Line\/|NAVER\(inapp|;\s?NAVER|BAND\/|DaumApps|everytimeApp|Twitter|Snapchat|; wv\)/i.test(ua);
+  window.__INAPP=inapp;
+  if(!inapp||location.hash==='#stay')return;
+  var android=/Android/i.test(ua),ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
+  var kakao=/KAKAOTALK/i.test(ua),line=/Line\//i.test(ua);
+  var rest=url.replace(/^https?:\/\//,'');
+  function stillHere(f){setTimeout(function(){if(!document.hidden)f()},1600)}
+  try{
+    if(line&&url.indexOf('openExternalBrowser')<0){location.href=url+(url.indexOf('?')<0?'?':'&')+'openExternalBrowser=1';return}
+    if(android){
+      location.href='intent://'+rest+'#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url='+encodeURIComponent(url+'#stay')+';end';
+      if(kakao)stillHere(function(){location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(url)});
+    }else if(ios){
+      location.href='googlechromes://'+rest;
+      if(kakao)stillHere(function(){location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(url)});
+    }
+  }catch(e){}
+})();
+</script>
+<title>진담 짝꿍어휘 단어장 · HSK 5급</title>
+<style>
+:root{--y:#f5b700;--yt:#1f2a26;--gold:#a87400;--cream:#fff6d9;--pulse:#ffe9a3;--act:#ffefb8;--line2:var(--line2);--rgb:245,183,0;--rgb2:168,116,0;--glow:#fff4cf;--glow2:#fffaf0;--door1:#e9a600;--tagb:#f0d27a;--arch1:#fffdf4;--arch2:#fff1bf;--ink:#1f2a26;--gr:#4a5b55;--mut:#8a918c;--dash:#d9d2bc;--bg:#f3f1ea;--org:#d9822b;--orgbg:#fff1e3;
+--cn:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei",sans-serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+textarea{font:inherit;-webkit-user-select:text;user-select:text}
+.cn{font-family:var(--cn)}
+/* 앱 바 */
+.bar{position:sticky;top:0;z-index:6;background:#fff;padding:calc(8px + env(safe-area-inset-top)) 12px 8px;border-bottom:1px solid #ece8dc}
+.r1{display:flex;align-items:center;gap:6px}
+.r1 .t{flex:1;font-weight:800;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.r1 .t small{color:var(--gold);font-weight:700;margin-right:4px}
+.ib{height:32px;padding:0 10px;border-radius:16px;background:var(--cream);color:var(--gold);font-weight:800;font-size:12.5px;white-space:nowrap}
+.bar>div{max-width:640px;margin-left:auto;margin-right:auto}
+.tabs{display:flex;gap:4px;margin-top:8px;background:#f6f4ee;border-radius:12px;padding:3px}
+.tabs button{flex:1;padding:8px 2px;border-radius:9px;font-size:13.5px;font-weight:700;color:var(--mut);white-space:nowrap}
+.tabs button.on{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.badge{display:inline-block;min-width:18px;padding:0 5px;margin-left:3px;border-radius:9px;background:var(--y);color:var(--ink);font-size:11px;line-height:18px}
+.badge.o{background:var(--org);color:#fff}
+.badge:empty{display:none}
+/* 책 페이지 */
+#page{max-width:640px;margin:0 auto;background:#fff;min-height:calc(100vh - 110px);padding:14px 16px calc(150px + env(safe-area-inset-bottom));touch-action:pan-y}
+@media(min-width:660px){#page{margin:16px auto;border-radius:6px;box-shadow:0 2px 14px rgba(0,0,0,.08);min-height:auto;padding:26px 34px 120px}}
+.rh{display:flex;justify-content:space-between;font-size:12px;color:var(--gr);padding-bottom:6px;border-bottom:1.5px solid var(--y)}
+.rh b{color:var(--gold)}
+.band{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--y);border-radius:10px;padding:8px 10px;margin-top:12px}
+.band .s{font-weight:900;font-size:16px}
+.band .lv{background:#fff;border-radius:5px;padding:1px 6px;font-weight:800;font-size:12px}
+.band .rg{font-size:13px;font-weight:600}
+.band .gm{margin-left:auto;background:#fff;border-radius:6px;padding:3px 8px;font-size:11.5px;white-space:nowrap}
+.band .gm u{text-decoration:none;border-bottom:1px solid var(--ink);padding:0 3px;font-weight:700}
+.ent{display:grid;grid-template-columns:50px 1fr;gap:6px;padding:14px 0;border-bottom:1.5px dashed var(--dash)}
+.ent:last-of-type{border-bottom:0}
+.lc .no{color:var(--gold);font-weight:800;font-size:14.5px;letter-spacing:.01em}
+.bx{display:flex;gap:2px;margin-top:2px;padding:4px 0}
+.bx i{width:13px;height:13px;border:1.6px solid var(--gold);border-radius:2px;display:block}
+.bx i.f{background:var(--y);border-color:var(--gold)}
+.bx i.due{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{background:var(--pulse)}}
+.mo{margin-top:6px;font-size:10.5px;font-weight:800;color:var(--mut);border:1.2px dashed #cfc9b8;border-radius:6px;padding:2px 5px}
+.mo.on{color:var(--org);border:1.2px solid var(--org);background:var(--orgbg)}
+.hd{display:flex;align-items:baseline;gap:8px;cursor:pointer}
+.hd .h{font-family:var(--cn);font-size:27px;font-weight:700;line-height:1.1}
+.hd .p{color:var(--gold);font-size:16px;font-weight:600}
+.hd .k{margin-left:auto;font-weight:800;font-size:14px;text-align:right;word-break:keep-all;padding-left:6px}
+.cb{background:var(--cream);border-radius:9px;padding:6px 10px;margin-top:8px}
+.cr{display:grid;grid-template-columns:16px auto 1fr;grid-template-areas:"i c k" "i p p";column-gap:8px;align-items:baseline;padding:5px 0;cursor:pointer;border-radius:6px}
+.cr:active{background:var(--act)}
+.cr .ci{grid-area:i;color:var(--gold);font-size:12px}
+.cr .ch{grid-area:c;font-family:var(--cn);font-weight:700;font-size:17px;white-space:nowrap}
+.cr .cp{grid-area:p;font-size:12.5px;color:var(--gr)}
+.cr .ck{grid-area:k;font-size:13.5px;text-align:right;word-break:keep-all}
+@media(min-width:560px){.cr{grid-template-columns:18px 34% 30% 1fr;grid-template-areas:"i c p k"}.cr .ck{text-align:left}}
+.hw{color:var(--gold)}
+u.lv{text-decoration:underline dotted var(--gr);text-underline-offset:4px}
+u.lv sup{font-size:9px;color:var(--gr);font-family:sans-serif;margin-left:1px}
+.p,.k,.cp,.ck{transition:opacity .35s ease,filter .35s ease}
+body.hiding #page .p,body.hiding #page .k,body.hiding #page .cp,body.hiding #page .ck{opacity:0;filter:blur(8px)}
+.h,.ch{transition:opacity .35s ease,filter .35s ease}
+body.hidezh #page .hd .h,body.hidezh #page .p,body.hidezh #page .ch,body.hidezh #page .cp{opacity:0;filter:blur(9px)}
+.fin{text-align:center;margin:18px 0 4px;padding:14px;background:var(--cream);border-radius:12px}
+.fin b{font-size:16px}.fin div{font-size:13px;color:var(--gr);margin-top:3px}
+.pn{text-align:center;color:var(--gold);font-size:13px;margin-top:18px;font-weight:700}
+.empty{text-align:center;color:var(--gr);padding:50px 10px;font-size:14px;line-height:1.8}
+.lst-h{font-size:13px;color:var(--gr);padding:4px 0 2px}
+.lst-h b{color:var(--ink)}
+.hint{font-size:11.5px;color:var(--mut);text-align:center;margin-top:10px}
+/* 아래 바 */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:6;display:flex;justify-content:center;padding:8px 12px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(rgba(255,255,255,0),#fff 35%)}
+.dkw{width:100%;max-width:640px}
+.dkr{display:grid;grid-template-columns:1fr .9fr 1fr;gap:6px;margin-bottom:6px}
+.dk{display:grid;grid-template-columns:56px 1fr 56px;gap:6px}
+.hold{height:52px;border-radius:14px;background:var(--ink);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.2;touch-action:none;-webkit-user-select:none;user-select:none;box-shadow:0 3px 10px rgba(31,42,38,.25);transition:background .15s,transform .1s}
+.hold .hl1{font-size:14.5px;font-weight:900;white-space:nowrap}
+.hold .hl1 i{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:10px;background:var(--y);color:var(--ink);font-size:12px;margin-right:4px;font-family:var(--cn)}
+.hold .hl2{font-size:10.5px;opacity:.75;margin-top:2px;white-space:nowrap}
+.hold.on{background:var(--gold);transform:scale(.97)}
+.hold.new{animation:hnew 1.6s ease-in-out infinite}
+@keyframes hnew{50%{box-shadow:0 0 0 6px rgba(var(--rgb),.45)}}
+.nb{height:44px;border-radius:14px;background:#fff;border:1.5px solid #e6e1d3;font-size:18px;font-weight:800;color:var(--gold)}
+.nb:disabled{opacity:.35}
+.pg{height:44px;border-radius:14px;background:#fff;border:1.5px solid #e6e1d3;font-weight:800;font-size:14px;line-height:1.1}
+.pg small{display:block;font-size:10.5px;color:var(--mut);font-weight:600}
+.go{height:52px;border-radius:14px;background:var(--y);font-weight:900;font-size:14.5px;box-shadow:0 3px 10px rgba(var(--rgb),.35)}
+/* 시트 */
+.ov{position:fixed;inset:0;z-index:20;background:rgba(31,42,38,.4);display:none;align-items:flex-end;justify-content:center}
+.ov.show{display:flex}
+.sheet{width:100%;max-width:560px;max-height:92vh;overflow-y:auto;background:#fff;border-radius:22px 22px 0 0;padding:16px 16px calc(18px + env(safe-area-inset-bottom));animation:up .2s ease}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.shd{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:13px;color:var(--gold);font-weight:800}
+.x{width:34px;height:34px;border-radius:17px;background:#f4f1e8;font-size:16px;color:var(--ink)}
+.wc{background:var(--cream);border-radius:16px;padding:16px;text-align:center}
+.wc .h{font-family:var(--cn);font-size:50px;font-weight:700;line-height:1.15}
+.wc .p{font-size:19px;color:var(--gold);font-weight:700}
+.wc .k{font-size:16px;font-weight:700;margin-top:3px;word-break:keep-all}
+.acts{display:flex;justify-content:center;gap:6px;margin-top:10px;flex-wrap:wrap}
+.pill{height:36px;padding:0 13px;border-radius:18px;background:#fff;border:1.5px solid var(--line2);font-weight:800;font-size:13px;display:inline-flex;align-items:center;gap:4px}
+.pill.on{background:var(--orgbg);border-color:var(--org);color:var(--org)}
+.boxline{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px;font-size:12.5px;color:var(--gr)}
+.boxline .bx i{width:16px;height:16px}
+.sec-t{font-size:13px;font-weight:800;color:var(--gold);margin:16px 2px 4px}
+.mine{width:100%;min-height:64px;border:1.5px solid var(--line2);border-radius:12px;padding:10px;font-size:15px;resize:vertical;outline:none;background:#fffdf6}
+.mine:focus{border-color:var(--y)}
+.btn{display:block;width:100%;padding:14px;border-radius:14px;font-weight:900;font-size:15px;background:var(--y);margin-top:12px}
+.btn small{display:block;font-size:11.5px;font-weight:600;opacity:.8}
+.btn.w{background:#fff;border:1.5px solid #e6e1d3}
+.tbox{background:var(--cream);border-radius:18px;padding:20px 16px;text-align:center;min-height:240px;display:flex;flex-direction:column;justify-content:center}
+.mode{display:inline-block;margin:0 auto 10px;padding:5px 12px;border-radius:999px;background:#fff;color:var(--gold);font-size:13px;font-weight:800}
+.prompt{font-size:25px;font-weight:900;word-break:keep-all;line-height:1.35}
+.ear{font-size:54px;line-height:1}
+.sub{font-size:13px;color:var(--gr);margin-top:8px}
+.tb{height:10px;border-radius:5px;background:#fff;overflow:hidden;margin:18px 0 6px}
+.tb div{height:100%;width:100%;background:var(--y)}
+.secn{font-size:30px;font-weight:900;color:var(--gold);font-variant-numeric:tabular-nums}
+.ans .c{font-family:var(--cn);font-size:32px;font-weight:800}
+.ans .cp2{font-size:16px;color:var(--gold);font-weight:700;margin-top:4px}
+.ans .ck2{font-size:16px;margin-top:4px;word-break:keep-all}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.two .b{padding:15px 6px;border-radius:14px;font-weight:900;font-size:14.5px;background:#fff;border:1.5px solid #e6e1d3}
+.two .b.ok{background:var(--y);border-color:var(--y)}
+.two .b.re{background:var(--orgbg);color:var(--org);border-color:#f3cfaa}
+.two .full{grid-column:1/-1}
+.prog{display:flex;gap:4px;justify-content:center;margin-bottom:10px}
+.prog span{width:22px;height:5px;border-radius:3px;background:#eee6cc}
+.prog span.d{background:var(--y)}
+/* 진도표 */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.st{background:var(--cream);border-radius:12px;padding:10px 4px;text-align:center}
+.st b{display:block;font-size:22px}
+.st span{font-size:11.5px;color:var(--gr)}
+table.pt{width:100%;border-collapse:collapse;margin-top:12px;font-size:12.5px}
+.pt th{background:var(--y);padding:7px 3px;font-size:12px}
+.pt th:first-child{border-radius:8px 0 0 8px;text-align:left;padding-left:8px}.pt th:last-child{border-radius:0 8px 8px 0}
+.pt td{padding:7px 3px;border-bottom:1px solid #f0ebdc;text-align:center}
+.pt td:first-child{text-align:left;padding-left:6px;font-weight:800;white-space:nowrap}
+.pt td:first-child small{display:block;font-weight:500;color:var(--mut);font-size:10.5px}
+.pt .lvr td{background:none;border:0;text-align:left;padding:10px 0 2px}
+.pt .lvr span{background:var(--cream);color:var(--gold);font-weight:900;border-radius:5px;padding:2px 7px;font-size:12px}
+.dt{min-width:42px;height:28px;border-radius:7px;border:1.3px dashed #d8cfb4;color:var(--mut);font-size:12px;font-weight:700}
+.dt.f{border:1.3px solid var(--y);background:var(--cream);color:var(--ink)}
+.kw{display:flex;flex-direction:column;align-items:center;font-size:10px;color:var(--gr)}
+/* 공부법 */
+.g-h{display:flex;align-items:center;gap:7px;font-weight:900;font-size:16px;margin:16px 0 8px}
+.g-h i{font-style:normal;width:22px;height:22px;border-radius:11px;background:var(--y);display:inline-flex;align-items:center;justify-content:center;font-size:13px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.flow div{background:#f7f5ef;border-radius:10px;padding:8px 3px;text-align:center;font-size:12px;font-weight:800;line-height:1.3}
+.flow div small{display:block;font-weight:600;color:var(--gold);font-size:10.5px}
+.flow .a{background:var(--y)}.flow .z{background:var(--cream)}
+.gp{font-size:13px;color:var(--gr);line-height:1.65;margin:8px 0 0;word-break:keep-all}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.steps div{background:var(--cream);border-radius:10px;padding:9px 10px;font-size:12.5px;line-height:1.5}
+.steps b{display:block;font-size:13px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center}
+.three div{background:#f7f5ef;border-radius:10px;padding:9px 4px;font-size:12px;line-height:1.45}
+.three b{display:block;font-size:13px}
+.how{background:#f7f5ef;border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.75}
+.how b{color:var(--gold)}
+.setrow{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#f7f5ef;border-radius:12px;padding:11px 12px;margin-top:6px;font-size:13.5px}
+.setrow .opts{display:flex;gap:4px}
+.setrow .opts button{padding:6px 10px;border-radius:9px;background:#fff;font-weight:800;font-size:12.5px}
+.setrow .opts button.on{background:var(--y)}
+.note{font-size:11.5px;color:var(--mut);line-height:1.6;margin-top:12px}
+.jump{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.jump button{background:#f7f5ef;border-radius:12px;padding:10px;text-align:left;font-weight:900;font-size:14px}
+.jump button small{display:block;font-weight:600;font-size:11.5px;color:var(--gr)}
+.jump button.cur{background:var(--y)}
+.jin{display:flex;gap:6px;margin-top:10px}
+.jin input{flex:1;min-width:0;height:44px;border:1.5px solid #e6e1d3;border-radius:12px;padding:0 12px;font-size:16px;-webkit-user-select:text;user-select:text}
+.jin button{padding:0 14px;border-radius:12px;background:var(--y);font-weight:900}
+.toast{position:fixed;left:50%;bottom:calc(130px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:13px;z-index:110;opacity:0;transition:opacity .2s;pointer-events:none;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.toast.show{opacity:1}
+/* 강조색 위 글자 */
+.band,.badge:not(.o),.go,.btn:not(.w),.two .b.ok,.flow .a,.g-h i,.hold .hl1 i,.pt th,.setrow .opts button.on,.jump button.cur,.i-pill,#inapp .bt,.jin button,.flow .a small{color:var(--yt)}
+.band .lv,.band .gm{color:var(--ink)}
+.jump button.cur small{color:inherit;opacity:.85}
+/* 인트로 */
+#intro{position:fixed;inset:0;z-index:60;background:radial-gradient(120% 70% at 50% 62%,var(--glow) 0%,var(--glow2) 45%,#fff 75%);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:calc(26px + env(safe-area-inset-top)) 20px calc(26px + env(safe-area-inset-bottom));cursor:pointer;overflow:hidden;transition:opacity .55s ease .35s}
+#intro.go{opacity:0;pointer-events:none}
+.i-top{text-align:center}
+.i-pill{display:inline-block;background:var(--y);border-radius:999px;padding:5px 13px;font-size:12px;font-weight:900;letter-spacing:.02em}
+.i-brand{font-size:12px;color:var(--gr);margin-top:8px;letter-spacing:.06em}
+.i-t1{font-size:21px;font-weight:900;margin-top:10px}
+.i-t2{font-size:31px;font-weight:900;color:var(--gold);margin-top:2px;letter-spacing:-.01em}
+.i-au{font-size:12.5px;color:var(--mut);margin-top:6px}
+.i-stage{position:relative;width:min(340px,90vw);height:min(330px,44vh);flex:none}
+.door{position:absolute;left:4%;bottom:0;width:54%;height:96%}
+.door .arch{position:absolute;inset:0;border:12px solid var(--y);border-bottom:0;border-radius:999px 999px 0 0;background:linear-gradient(var(--arch1),var(--arch2));box-shadow:inset 0 0 40px rgba(var(--rgb),.35)}
+.door .rays{position:absolute;left:50%;top:14%;width:70%;height:30%;transform:translateX(-50%);background:repeating-conic-gradient(from 200deg at 50% 100%,rgba(var(--rgb),.28) 0 6deg,transparent 6deg 20deg);-webkit-mask:radial-gradient(circle at 50% 100%,#000 40%,transparent 72%);mask:radial-gradient(circle at 50% 100%,#000 40%,transparent 72%);animation:ray 4s ease-in-out infinite}
+@keyframes ray{50%{opacity:.5}}
+.door .panel{position:absolute;left:-2%;bottom:0;width:34%;height:86%;background:linear-gradient(90deg,var(--door1),var(--y));border-radius:4px 10px 0 0;transform-origin:left center;transform:perspective(400px) rotateY(-38deg);box-shadow:2px 0 6px rgba(0,0,0,.12);transition:transform .7s cubic-bezier(.3,.7,.3,1)}
+.door .panel:before,.door .panel:after{content:"";position:absolute;left:18%;right:18%;border:2px solid rgba(255,255,255,.55);border-radius:4px}
+.door .panel:before{top:10%;height:32%}.door .panel:after{top:50%;height:36%}
+.door .floor{position:absolute;left:-8%;right:-8%;bottom:-6px;height:8px;border-radius:4px;background:#8a6a3b}
+#intro.go .door .panel{transform:perspective(400px) rotateY(-88deg)}
+#intro.go .door .arch{animation:glow .6s ease forwards}
+@keyframes glow{to{box-shadow:inset 0 0 120px rgba(255,214,90,.95)}}
+.tag{position:absolute;background:#fff;border:1.5px solid var(--tagb);border-radius:7px;padding:2px 7px;font-family:var(--cn);font-weight:800;font-size:13px;color:var(--ink);white-space:nowrap;box-shadow:0 2px 6px rgba(var(--rgb2),.12);animation:fl 5s ease-in-out infinite}
+.tag b{color:var(--gold);font-weight:900}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.spark{position:absolute;color:var(--y);font-size:26px;animation:tw 2.4s ease-in-out infinite}
+@keyframes tw{50%{transform:scale(.6) rotate(20deg);opacity:.5}}
+.mate{position:absolute;right:0;bottom:-2px;width:40%;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.mate .arm{transform-origin:84px 74px;animation:wave 1.1s ease-in-out infinite}
+@keyframes wave{50%{transform:rotate(-24deg)}}
+.bubble{position:absolute;right:-2%;top:2%;width:58%;background:#fff;border:1.8px solid var(--gold);border-radius:14px;padding:8px 10px;font-size:11.5px;line-height:1.5;word-break:keep-all;box-shadow:0 3px 10px rgba(var(--rgb2),.12);animation:pop .5s ease .3s both}
+.bubble:after{content:"";position:absolute;left:46%;bottom:-8px;width:12px;height:12px;background:#fff;border-right:1.8px solid var(--gold);border-bottom:1.8px solid var(--gold);transform:rotate(45deg)}
+.bubble b{color:var(--gold)}
+@keyframes pop{from{transform:scale(.7);opacity:0}}
+.i-bot{text-align:center}
+.press{font-size:17px;font-weight:900;animation:blink 1.4s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.press-s{font-size:12px;color:var(--mut);margin-top:6px}
+.i-pub{font-size:11px;color:#b9b3a3;margin-top:12px;letter-spacing:.08em}
+@media(max-height:620px){.i-t2{font-size:26px}.i-t1{font-size:18px}.bubble{font-size:10.5px}}
+/* 앱 안 브라우저 안내 */
+#inapp{position:fixed;inset:0;z-index:100;background:rgba(255,250,236,.98);display:none;flex-direction:column;align-items:center;justify-content:center;padding:28px 24px calc(28px + env(safe-area-inset-bottom));text-align:center}
+#inapp.show{display:flex}
+#inapp .ic{font-size:46px}
+#inapp h2{font-size:21px;margin:10px 0 6px;font-weight:900}
+#inapp p{font-size:14px;color:var(--gr);line-height:1.65;margin:0;word-break:keep-all}
+#inapp .bt{display:block;width:100%;max-width:320px;padding:15px;border-radius:14px;font-weight:900;font-size:16px;background:var(--y);margin-top:18px}
+#inapp .bt2{display:block;width:100%;max-width:320px;padding:13px;border-radius:14px;font-weight:800;font-size:14px;background:#fff;border:1.5px solid #e6e1d3;margin-top:8px}
+#inapp .url{margin-top:10px;font-size:12px;color:var(--mut);word-break:break-all;-webkit-user-select:all;user-select:all;max-width:320px}
+#inapp .how{margin-top:16px;text-align:left;max-width:320px}
+#inapp .stay{margin-top:16px;font-size:12.5px;color:var(--mut);text-decoration:underline}
+:root{--y:#4394ff;--yt:#fff;--gold:#2b6fd6;--cream:#e8f1ff;--pulse:#cfe2ff;--act:#d8e7ff;--line2:#c3d8f7;--rgb:67,148,255;--rgb2:43,111,214;--glow:#e3efff;--glow2:#f5f9ff;--door1:#2f7fe6;--tagb:#a9c9f5;--arch1:#f8fbff;--arch2:#d5e6ff;--dash:#c9d7ec;--bg:#eef3fa}</style>
 </head>
-<body class="mode-all">
-
-  <!-- ===== 홈 (표지) ===== -->
-  <section class="home" id="home" aria-label="홈">
-    <button class="icon-btn stats-btn home-stats" data-stats aria-label="내 공부 현황"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19.2S6.2 13.3 6.2 8.9a5.8 5.8 0 0 1 11.6 0c0 4.4-5.8 10.3-5.8 10.3z"/><circle cx="12" cy="8.9" r="2.4"/><ellipse cx="12" cy="20.4" rx="6.2" ry="1.7"/></svg></button>
-    <div class="home-inner">
-      <div class="cover-wrap">
-        <!-- 진담중국어 단어장 표지 원본 그림 (배경 점무늬만 투명하게 뺀 것) -->
-        <img class="cover" src="img/cover.png" alt="HSK 3.0 버전 진담 짝꿍어휘 단어장 · HSK 5급 — 필수 어휘 1600 · 단어마다 짝꿍어휘 3개. 덩어리로 익히면, 중국어가 툭!" draggable="false">
-      </div>
-
-      <div class="home-actions">
-        <button class="review-pill" id="reviewBtn" hidden></button>
-        <button class="cta" id="cardsBtn"><b>시작하기</b><small id="continueSub"></small></button>
-        <div class="home-row">
-          <button class="ghost" id="homeSectionBtn">구간 고르기</button>
-          <button class="ghost" id="guideBtn">공부 방법</button>
-        </div>
-      </div>
-    </div>
-
-    <footer class="wave">
-      <svg class="wave-top" viewBox="0 0 1414 60" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 30 C120 -4 240 -4 354 26 S590 62 707 30 S940 -4 1060 26 S1300 62 1414 22 V60 H0 Z"/>
-      </svg>
-      <b>진담중국어</b>
-      <small>진심을 담은 중국어 · 아웃풋에 진심</small>
-      <small class="copy">© 2026 진담중국어. All rights reserved.</small>
-    </footer>
-  </section>
-
-  <!-- ===== 🃏 카드로 외우기: 한 화면에 1단어. 꾹 누르면 정답, 톡 치면 뒤집기, 밀면 넘기기 ===== -->
-  <div class="app" id="cards" hidden>
-    <header class="top four">
-      <button class="icon-btn" data-home aria-label="홈으로"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg></button>
-      <button class="band" id="cardBandBtn" aria-label="구간 고르기">
-        <b id="cardBandTitle"></b><span class="band-more">구간 ▾</span>
-      </button>
-      <button class="icon-btn" id="listBtn" aria-label="단어 목록">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3.5" width="16" height="17" rx="3"/><path d="M8.5 9h7M8.5 13h7M8.5 17h4"/></svg>
-      </button>
-      <button class="icon-btn stats-btn" data-stats aria-label="내 공부 현황"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19.2S6.2 13.3 6.2 8.9a5.8 5.8 0 0 1 11.6 0c0 4.4-5.8 10.3-5.8 10.3z"/><circle cx="12" cy="8.9" r="2.4"/><ellipse cx="12" cy="20.4" rx="6.2" ry="1.7"/></svg></button>
-    </header>
-
-    <main class="card-stage" id="cardStage"></main>
-
-    <!-- 밀기 안내: 왼쪽 = 알아요 / 오른쪽 = 몰라요 -->
-    <div class="judge" id="judge">
-      <span class="sg left">← ⭕ 알아요</span>
-      <button class="undo-btn" id="undoBtn" type="button" hidden aria-label="방금 넘긴 카드 취소"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>취소</b><small></small></button>
-      <span class="sg right">❌ 몰라요 →</span>
-    </div>
-    <footer class="card-foot" id="cardFoot"></footer>
+<body>
+<div id="inapp">
+  <div class="ic">🌐</div>
+  <h2>크롬으로 열어 주세요</h2>
+  <p>카카오톡·인스타그램 앱 안에서는<br>발음이 안 나오거나 공부 기록이 사라질 수 있어요.</p>
+  <button class="bt" id="iaOpen">크롬으로 열기</button>
+  <button class="bt2" id="iaCopy">주소 복사하기</button>
+  <div class="url" id="iaUrl"></div>
+  <div class="how" id="iaHow"></div>
+  <button class="stay" id="iaStay">그냥 여기서 볼게요</button>
+</div>
+<div id="intro" role="button" aria-label="시작하기">
+  <div class="i-top">
+    <span class="i-pill">HSK 3.0 · 무화과 짝꿍과 함께</span>
+    <div class="i-brand">진심을 담은 중국어 · 진담중국어</div>
+    <div class="i-t1">단어가 말로 이어지는</div>
+    <div class="i-t2">HSK 5급 짝꿍어휘</div>
+    <div class="i-au">전진아 지음 · 1600단어 · 짝꿍표현 4,800</div>
   </div>
+  <div class="i-stage">
+    <div class="door"><div class="arch"></div><div class="rays"></div>
+      <span class="tag" style="left:36%;top:24%;animation-delay:-1s"><b>表达</b>意见</span>
+      <span class="tag" style="left:54%;top:36%;animation-delay:-2.5s"><b>表达</b>感谢</span>
+      <span class="tag" style="left:33%;top:50%;animation-delay:-0.4s"><b>保持</b>联系</span>
+      <span class="tag" style="left:56%;top:58%;animation-delay:-3.2s"><b>把握</b>机会</span>
+      <span class="tag" style="left:35%;top:72%;animation-delay:-1.8s"><b>表达</b>清楚</span>
+      <div class="panel"></div><div class="floor"></div></div>
+    <span class="spark" style="left:-2%;top:30%">✦</span><span class="spark" style="left:58%;top:4%;font-size:18px;animation-delay:-1.2s">✦</span>
+    <div class="bubble">안녕! 나는 <b>무화과 짝꿍</b>이야.<br>1600개의 단어가 짝꿍과 함께 기다리고 있어. <b>같이 들어가 볼까?</b></div>
+    <svg class="mate" viewBox="0 0 120 140" aria-hidden="true">
+      <path d="M60 26 C60 18 61 12 63 7" stroke="#5f9e2f" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M62 12 C53 3 41 7 43 15 C51 19 59 17 62 12Z" fill="#6aaa36"/>
+      <path d="M62 10 C69 1 83 3 81 11 C73 17 65 15 62 10Z" fill="#7fc142"/>
+      <path class="arm" d="M98 82 C108 76 112 66 110 56" stroke="#5b2b5e" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M22 86 C12 92 10 102 14 110" stroke="#5b2b5e" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <ellipse cx="47" cy="128" rx="9" ry="5" fill="#5b2b5e"/><ellipse cx="73" cy="128" rx="9" ry="5" fill="#5b2b5e"/>
+      <path d="M60 24 C44 40 18 66 19 92 C20 114 38 124 60 124 C82 124 100 114 101 92 C102 66 76 40 60 24Z" fill="#7a3b7e" stroke="#5b2b5e" stroke-width="5"/>
+      <path d="M60 33 C46 47 26 69 27 91 C28 109 42 116 60 116 C78 116 92 109 93 91 C94 69 74 47 60 33Z" fill="#dc5a6e" stroke="#f7e4c6" stroke-width="3"/>
+      <g fill="#f6d58b"><ellipse cx="40" cy="74" rx="1.8" ry="3" transform="rotate(-30 40 74)"/><ellipse cx="80" cy="74" rx="1.8" ry="3" transform="rotate(30 80 74)"/><ellipse cx="34" cy="96" rx="1.8" ry="3" transform="rotate(-60 34 96)"/><ellipse cx="86" cy="96" rx="1.8" ry="3" transform="rotate(60 86 96)"/><ellipse cx="48" cy="54" rx="1.8" ry="3" transform="rotate(-20 48 54)"/><ellipse cx="72" cy="54" rx="1.8" ry="3" transform="rotate(20 72 54)"/><ellipse cx="60" cy="110" rx="3" ry="1.8"/></g>
+      <circle cx="49" cy="70" r="5" fill="#1f2a26"/><circle cx="71" cy="70" r="5" fill="#1f2a26"/>
+      <circle cx="50.5" cy="68.3" r="1.6" fill="#fff"/><circle cx="72.5" cy="68.3" r="1.6" fill="#fff"/>
+      <ellipse cx="40" cy="80" rx="6" ry="3.6" fill="#f7a6b6" opacity=".9"/><ellipse cx="80" cy="80" rx="6" ry="3.6" fill="#f7a6b6" opacity=".9"/>
+      <path d="M54 78 Q60 84 66 78" stroke="#1f2a26" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <text x="60" y="102" text-anchor="middle" font-size="16" font-weight="900" fill="#fff" font-family="-apple-system,'Apple SD Gothic Neo','Noto Sans KR',sans-serif">진담</text>
+    </svg>
+  </div>
+  <div class="i-bot">
+    <div class="press">아무 키나 눌러 주세요</div>
+    <div class="press-s">화면을 터치해도 시작해요 · 꼭 크롬으로 열어 주세요</div>
+    <div class="i-pub">JINDAM CHINESE</div>
+  </div>
+</div>
+<div class="bar">
+  <div class="r1"><div class="t"><small>진담중국어</small>HSK 5급 짝꿍어휘</div>
+    <button class="ib" id="bProg">진도표</button><button class="ib" id="bGuide">공부법</button><button class="ib" id="bSet">⚙︎</button></div>
+  <div class="tabs"><button data-v="book">📖 책</button><button data-v="today">오늘 복습<span class="badge" id="cToday"></span></button><button data-v="unk">모르는 단어<span class="badge o" id="cUnk"></span></button></div>
+</div>
+<main id="page"></main>
+<div class="dock"><div class="dkw">
+  <div class="dkr"><button class="hold" data-mode="zh"><span class="hl1"><i>汉</i>한자만</span><span class="hl2">꾹 · 뜻 떠올리기</span></button><button class="go" id="goTest">⚡ 즉시반응</button><button class="hold" data-mode="ko"><span class="hl1"><i>가</i>한국어만</span><span class="hl2">꾹 · 중국어로 말하기</span></button></div>
+  <div class="dk"><button class="nb" id="prev">◀</button><button class="pg" id="pgBtn"></button><button class="nb" id="next">▶</button></div>
+</div></div>
+<div class="ov" id="ov"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast"></div>
 
-  <!-- ===== 시작하기: 연습 방향 고르기 ===== -->
-  <section class="sheet" id="dirSheet" hidden aria-label="연습 방향 고르기">
-    <div class="sheet-panel dir-pick">
-      <div class="sheet-head"><b>어떻게 연습할까요?</b><button class="sheet-close" data-close aria-label="닫기">✕</button></div>
-      <p class="dir-sub" id="dirSub"></p>
-      <button class="dir-opt" data-dir="zh">
-        <span class="dir-ic" lang="zh-CN">中</span>
-        <span class="dir-txt"><b>중국어 <i>→</i> 한국어</b><small>한자를 보고 뜻 떠올리기</small></span>
-        <span class="dir-last">지난번</span>
-      </button>
-      <button class="dir-opt" data-dir="ko">
-        <span class="dir-ic">한</span>
-        <span class="dir-txt"><b>한국어 <i>→</i> 중국어</b><small>뜻을 보고 중국어로 말하기</small></span>
-        <span class="dir-last">지난번</span>
-      </button>
-    </div>
-  </section>
+<script src="data.js"></script>
+<script>
+const W=WORDS.map(w=>({n:w.no,h:w.word,p:w.pinyin,k:w.meaning,c:w.pairs}));
+const CFG={"key": "jindam-hsk5-book-v1", "name": "HSK 5급 짝꿍어휘", "book": "단어가 말로 이어지는 HSK 5급 짝꿍어휘", "levels": [[1, "5급"]], "lvmark": false, "legacy": "hsk5:", "fruit": "fig", "fruitName": "무화과", "fruitJosa": "는", "fruitColor": "빨강", "guideRef": "", "progNote": "100% 익으면 그 구간은 완료!", "jumpEx": "예) 23 → 23쪽 · 0062 → 表达가 있는 22쪽"};
+const KEY=CFG.key;
+const NW=W.length,NSEC=Math.ceil(NW/50);
+const FIRST=10,LAST=FIRST+Math.ceil(NW/5)-1; // 책 쪽 번호: 0001–0005 = 10쪽, 한 쪽 5단어
+let S={view:'book',page:10,unk:[],box:{},start:{},prog:{},mine:{},limit:3,slow:false,seenGuide:false,lp:{today:0,unk:0}};
+try{Object.assign(S,JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+let unk=new Set(S.unk);
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pad=n=>String(n).padStart(4,'0');
+const p2=n=>String(n).padStart(2,'0');
+const byN=n=>W[n-1];
+const secOf=n=>Math.ceil(n/50);
+const lvOf=s=>{let r=CFG.levels[0][1];CFG.levels.forEach(([f,l])=>{if(s>=f)r=l});return r};
+const lvHead=s=>{const x=CFG.levels.find(([f])=>f===s);return x?x[1]:''};
+const pageOf=n=>FIRST+Math.floor((n-1)/5);
+const secFirstPage=s=>FIRST+(s-1)*10;
+const plain=s=>CFG.lvmark?s.replace(/[3-9]/g,''):s;
 
-  <!-- ===== 📍 내 공부 현황 ===== -->
-  <section class="sheet" id="statsSheet" hidden aria-label="내 공부 현황">
-    <div class="sheet-panel stats">
-      <div class="sheet-head"><b class="st-title"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19.2S6.2 13.3 6.2 8.9a5.8 5.8 0 0 1 11.6 0c0 4.4-5.8 10.3-5.8 10.3z"/><circle cx="12" cy="8.9" r="2.4"/><ellipse cx="12" cy="20.4" rx="6.2" ry="1.7"/></svg> 내 공부 현황</b><button class="st-reset" id="resetBtn">기록 초기화</button><button class="sheet-close" data-close aria-label="닫기">✕</button></div>
-      <div class="stats-body" id="statsBody"></div>
-    </div>
-  </section>
+/* 날짜 */
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())};
+const dnum=s=>{const[a,b,c]=s.split('-').map(Number);return Date.UTC(a,b-1,c)/864e5};
+const addD=(s,k)=>{const d=new Date((dnum(s)+k)*864e5);return d.getUTCFullYear()+'-'+p2(d.getUTCMonth()+1)+'-'+p2(d.getUTCDate())};
+const md=s=>{const[,b,c]=s.split('-');return (+b)+'/'+(+c)};
+const mdK=s=>{const[,b,c]=s.split('-');return (+b)+'월 '+(+c)+'일'};
 
-  <!-- ===== 구간 고르기 ===== -->
-  <section class="sheet" id="sectionSheet" hidden aria-label="구간 고르기">
-    <div class="sheet-panel">
-      <div class="sheet-head"><b>구간 고르기</b><button class="sheet-close" data-close aria-label="닫기">✕</button></div>
-      <div class="section-grid" id="sectionGrid"></div>
-    </div>
-  </section>
+/* 3칸: 첫날 → 1일 뒤 → 3일 뒤 */
+const GAP=[0,1,3];
+const boxes=n=>S.box[n]||[];
+function nextDue(n){const b=boxes(n);if(b.length>=3)return null;if(!b.length)return today();return addD(b[b.length-1],GAP[b.length])}
+function isDue(n){const d=nextDue(n);return !!d&&dnum(d)<=dnum(today())}
+function fillBox(n,quiet){
+  const b=boxes(n).slice();
+  if(b.length>=3){quiet||toast('3칸 완료! 이제 내 단어예요');return false}
+  if(b.length&&b[b.length-1]===today()){quiet||toast('오늘 칸은 이미 채웠어요');return false}
+  if(!isDue(n)){quiet||toast(mdK(nextDue(n))+'에 다시 만나서 다음 칸을 채워요');return false}
+  b.push(today());S.box[n]=b;save();
+  toast(b.length===3?'🎉 3칸 완료! 이제 내 단어예요 · 책에도 칠해 두세요':`칸을 채웠어요 ${'■'.repeat(b.length)}${'□'.repeat(3-b.length)} · 책에도 칠해 두세요`);
+  return true;
+}
+function undoBox(n){const b=boxes(n).slice();if(b.length&&b[b.length-1]===today()){b.pop();b.length?S.box[n]=b:delete S.box[n];save();toast('오늘 채운 칸을 지웠어요');return true}return false}
+/* 예전 카드형 단어장 기록(체크 3칸·다시 볼 단어·구간·방향) 옮기기: 한 번만 */
+(function migrate(){
+  if(!CFG.legacy)return;
+  try{
+    if(localStorage.getItem(KEY))return;
+    const g=k=>{const v=localStorage.getItem(CFG.legacy+k);return v==null?null:JSON.parse(v)};
+    const rounds=g('rounds')||{},srs=g('srs')||{},status=g('status')||{};let any=false;
+    Object.keys(rounds).forEach(no=>{const k=(rounds[no]||[]).filter(Boolean).length;if(!k)return;
+      let d=(srs[no]&&/^\d{4}-\d\d-\d\d$/.test(srs[no].last||''))?srs[no].last:addD(today(),-1);const arr=[d];
+      for(let i=k-1;i>0;i--){d=addD(d,-GAP[i]);arr.unshift(d)}S.box[no]=arr;any=true});
+    Object.keys(status).forEach(no=>{if(status[no]==='a'){unk.add(+no);any=true}});S.unk=[...unk];
+    const sec=g('section');if(typeof sec==='number'){S.page=Math.min(FIRST+sec*10,FIRST+Math.ceil(W.length/5)-1);any=true}
+    const dir=g('dir');if(dir)S.holdMode=dir==='ko'?'ko':'zh';
+    if(any){S.migrated=true;save()}
+  }catch(e){}
+})();
+const boxHTML=n=>{const b=boxes(n),due=isDue(n);return [0,1,2].map(i=>`<i class="${i<b.length?'f':(i===b.length&&due&&b.length>0?'due':'')}"></i>`).join('')};
 
-  <!-- ===== 📋 단어 목록 (검색 · 이 구간 · 오늘 본 단어 · 몰라요 단어) ===== -->
-  <section class="sheet" id="listSheet" hidden aria-label="단어 목록">
-    <div class="sheet-panel tall">
-      <div class="sheet-head">
-        <b class="st-title"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3.5" width="16" height="17" rx="3"/><path d="M8.5 9h7M8.5 13h7M8.5 17h4"/></svg> 단어 목록</b>
-        <button class="st-reset" id="maskBtn" aria-pressed="false">뜻 가리기</button>
-        <button class="sheet-close" data-close aria-label="닫기">✕</button>
-      </div>
-      <label class="search">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-        <input id="search" type="search" placeholder="한자 · 병음 · 뜻 · 번호로 찾기" autocomplete="off">
-      </label>
-      <div class="seg list-tabs" id="listTabs">
-        <button data-tab="sec" class="on">이 구간</button>
-        <button data-tab="today">오늘 본 단어</button>
-        <button data-tab="weak">❌ 몰라요</button>
-      </div>
-      <ul class="results" id="results"></ul>
-    </div>
-  </section>
+/* 한자 표시: 오늘의 단어는 금색, 3급 이상은 점선 밑줄+급수 */
+function rich(s,hw){
+  if(!CFG.lvmark){let h=esc(s);if(hw)h=h.split(esc(hw)).join(`<span class="hw">${esc(hw)}</span>`);return h}
+  const ch=[...s],out=[];const gold=new Array(ch.length).fill(false);
+  const clean=[],idx=[];ch.forEach((c,i)=>{if(!/[3-9]/.test(c)){clean.push(c);idx.push(i)}});
+  const cs=clean.join('');let from=0,k;
+  if(hw)while((k=cs.indexOf(hw,from))>=0){for(let j=k;j<k+hw.length;j++)gold[idx[j]]=true;from=k+hw.length}
+  for(let i=0;i<ch.length;i++){const c=ch[i];if(/[3-9]/.test(c))continue;
+    let h=esc(c);const lv=ch[i+1]&&/[3-9]/.test(ch[i+1])?ch[i+1]:null;
+    if(lv)h=`<u class="lv">${h}<sup>${lv}</sup></u>`;
+    if(gold[i])h=`<span class="hw">${h}</span>`;out.push(h)}
+  return out.join('');
+}
 
-  <!-- ===== 미리보기 카드 (보기만 하고 기록은 바뀌지 않음) ===== -->
-  <section class="sheet preview-sheet" id="previewSheet" hidden aria-label="단어 미리보기">
-    <div class="preview" id="preview"></div>
-  </section>
+/* ---------- TTS: Tingting 우선, 없으면 여자 목소리 ---------- */
+let voice=null;
+const FEMALE=/ting|huihui|yaoyao|xiaoxiao|xiaoyi|xiaohan|xiaomo|xiaorui|xiaoshuang|google\s*普通话|mandarin.*female|female|女/i;
+const MALE=/kangkang|yunxi|yunjian|yunyang|yunye|li-?mu|\bmale|男/i;
+function pickVoice(){
+  if(!('speechSynthesis' in window))return;
+  const vs=speechSynthesis.getVoices().filter(v=>/^zh/i.test(v.lang)||/chinese|普通话|中文/i.test(v.name));
+  const cn=vs.filter(v=>/zh[-_]?CN|cmn/i.test(v.lang)||/普通话|mainland/i.test(v.name));
+  const pool=cn.length?cn:vs;
+  voice=pool.find(v=>/ting/i.test(v.name))||pool.find(v=>FEMALE.test(v.name)&&!MALE.test(v.name))||pool.find(v=>!MALE.test(v.name))||pool[0]||null;
+}
+if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
+const ttsOK=()=>!!voice;
+function speak(text,onend){
+  let fired=false;const fin=()=>{if(!fired){fired=true;onend&&onend()}};
+  if(!('speechSynthesis' in window)||!voice){toast('이 기기에서 중국어 음성을 찾지 못했어요 · 크롬으로 열어 주세요');setTimeout(fin,300);return}
+  try{
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(plain(text).replace(/[？?]/g,''));
+    u.lang=voice.lang||'zh-CN';try{u.voice=voice}catch(e){}
+    u.rate=S.slow?.6:.85;if(!/ting/i.test(voice.name))u.pitch=1.15;
+    u.onend=fin;u.onerror=fin;
+    setTimeout(fin,Math.min(6000,900+text.length*(S.slow?520:380)));
+    speechSynthesis.speak(u);
+  }catch(e){setTimeout(fin,300)}
+}
 
-  <!-- ===== 공부 방법 (이렇게 공부해요) ===== -->
-  <section class="sheet" id="guideSheet" hidden aria-label="이렇게 공부해요">
-    <div class="sheet-panel guide">
-      <div class="sheet-head"><b>이렇게 공부해요</b><button class="sheet-close" data-close aria-label="닫기">✕</button></div>
-      <ol class="steps">
-        <li>
-          <span class="step-no">1</span>
-          <div><b>체크박스로 공부한 횟수 표시</b>
-            <p>체크박스 3개는 <b>서로 다른 날</b> 기억해 낼 때마다 채워져요. 처음 ⭕ → 1칸, 하루 뒤 또 ⭕ → 2칸, 3일 뒤 또 ⭕ → 3칸 완료! ❌ 몰라요면 한 칸 내려가요.</p></div>
-        </li>
-        <li>
-          <span class="step-no">2</span>
-          <div><b>단어 → 짝꿍어휘 순서로</b>
-            <p>앞면의 큰 글씨 단어를 먼저 떠올리고, 카드를 뒤집어 ①②③ 짝꿍어휘로 실제 쓰임을 확인해요.</p></div>
-        </li>
-        <li>
-          <span class="step-no">3</span>
-          <div><b>번호로 진도 확인</b>
-            <p>0001부터 1600까지 번호가 붙어 있고, 50개씩 파란 띠의 구간 32개로 나뉘어 있어요.</p></div>
-        </li>
-      </ol>
-      <ul class="app-tips">
-        <li><b>꾹</b>누르고 있으면 뜻·병음이 보이고, 손을 떼면 사라져요.</li>
-        <li><b>톡</b>치면 카드가 뒤집혀 짝꿍어휘가 나와요. 짝꿍어휘도 한 줄씩 꾹 눌러 확인해요.</li>
-        <li><b>📅 복습</b>체크한 단어는 하루 뒤, 3일 뒤에 ‘오늘 복습할 단어’로 다시 나와요. 홈에서 매일 먼저 해요.</li>
-        <li><b>밀기</b>떠올렸으면 왼쪽으로 밀어 ⭕ 알아요, 헷갈리면 오른쪽으로 밀어 ❌ 몰라요 — 몰라요 단어는 4장 뒤에 또 나와요.</li>
-        <li><b>↩ 취소</b>실수로 밀었으면 아래 가운데 ‘↩ 취소’를 눌러요(6초 동안 보여요). 체크도 그대로 돌아오고 카드가 다시 나와요.</li>
-        <li><b>🔊</b>소리 버튼을 누르면 중국어 발음이 나와요. 따라 말해 보세요.<br><small class="voice">발음 목소리: <span id="voiceName">확인 중…</span></small></li>
-        <li><b>방향</b>‘시작하기’를 누르면 고를 수 있어요. ‘중국어 → 한국어’는 한자를 보고 뜻 떠올리기, ‘한국어 → 중국어’는 뜻을 보고 중국어로 말하기예요.</li>
-        <li><b>❌ 바로 공부</b>몰라요로 넘기면 그 단어 카드가 바로 떠서 발음을 들려줘요. 짝꿍어휘까지 소리 내어 따라 말하고 ‘다음 카드’를 눌러요.</li>
-      </ul>
-      <p class="source">HSK 단어 및 급수는 중외언어교류협력센터의 《HSK考试大纲》 어휘 목록을 기준으로 확인했으며, 짝꿍어휘는 실제 말하기 연습을 위해 진담중국어가 추가하였다.</p>
-      <p class="copyright">© 2026 진담중국어(진심을 담은 중국어). All rights reserved.<br>단어장의 짝꿍어휘·구성·디자인·캐릭터는 진담중국어의 저작물로, 무단 복제·배포를 금합니다.</p>
-    </div>
-  </section>
+/* ---------- 목록 ---------- */
+function todayList(){ // 전날 헷갈린(모름) 단어 먼저 → 오늘 칸을 채울 차례인 단어
+  const a=[...unk].sort((x,y)=>x-y);const set=new Set(a);
+  W.forEach(w=>{const b=boxes(w.n);if(b.length>0&&b.length<3&&isDue(w.n)&&!set.has(w.n))a.push(w.n)});
+  return a;
+}
+const unkList=()=>[...unk].sort((x,y)=>x-y);
+function curList(){return S.view==='today'?todayList():unkList()}
+function counts(){$('cToday').textContent=todayList().length||'';$('cUnk').textContent=unk.size||''}
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+function entHTML(w){
+  return `<div class="ent" data-n="${w.n}">
+  <div class="lc"><div class="no">${pad(w.n)}</div><div class="bx" data-bx="${w.n}">${boxHTML(w.n)}</div><button class="mo${unk.has(w.n)?' on':''}" data-u="${w.n}">모름</button></div>
+  <div><div class="hd" data-open="${w.n}"><span class="h">${esc(w.h)}</span><span class="p">${esc(w.p)}</span><span class="k">${esc(w.k)}</span></div>
+  <div class="cb">${w.c.map((c,i)=>`<div class="cr" data-say="${w.n}:${i}"><span class="ci">${'①②③'[i]}</span><span class="ch">${rich(c[0],w.h)}</span><span class="cp">${esc(c[1])}</span><span class="ck">${esc(c[2])}</span></div>`).join('')}</div></div></div>`;
+}
+function render(){
+  document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===S.view));
+  counts();
+  const P=$('page');let h='';
+  if(S.view==='book'){
+    const p=S.page,s=Math.floor((p-FIRST)/10)+1,a=(p-FIRST)*5+1,b=a+4,lv=lvOf(s);
+    if(!S.start[s]){S.start[s]=today();save()}
+    const rng=`${pad(a)} – ${pad(b)}`,ttl=`<span><b>${CFG.name}</b> · 구간 ${p2(s)}</span>`;
+    h+=`<div class="rh">${p%2?ttl+`<span>${rng}</span>`:`<span>${rng}</span>`+ttl}</div>`;
+    if((p-FIRST)%10===0)h+=`<div class="band"><span class="s">구간 ${p2(s)}</span><span class="lv">${lv}</span><span class="rg">${pad((s-1)*50+1)} – ${pad(s*50)}</span><span class="gm">📱 게임 <b>구간 ${(s-1)*50+1} – ${s*50}</b> · 시작한 날 <u>${S.start[s].split('-')[1]*1}</u>월 <u>${S.start[s].split('-')[2]*1}</u>일</span></div>`;
+    for(let n=a;n<=b;n++)h+=entHTML(byN(n));
+    if((p-FIRST)%10===9)h+=`<div class="fin"><b>구간 ${p2(s)} 완주!</b><div>${s<NSEC?'다음 구간도 같이 가자! · 진도표에 오늘 날짜를 남겨요':NW+'단어 완주! 진도표에서 '+CFG.fruitName+'를 확인해요'}</div></div>`;
+    h+=`<div class="pn">— ${p} —</div>`;
+    h+=`<div class="hint">아래 <b>汉 한자만</b> · <b>가 한국어만</b> 버튼을 꾹 누르고 떠올려요(화면 아무 곳을 눌러도 마지막에 쓴 방식으로 가려져요) · 단어를 톡 → 짝꿍어휘 테스트 · ①②③ 톡 → 발음 · □□□ 톡 → 기억해 냈어요</div>`;
+  }else{
+    const L=curList(),pages=Math.max(1,Math.ceil(L.length/5));let lp=Math.min(S.lp[S.view]||0,pages-1);S.lp[S.view]=lp;
+    h+=`<div class="rh"><span><b>${S.view==='today'?'오늘 복습할 단어':'모르는 단어'}</b></span><span>${L.length}단어</span></div>`;
+    if(!L.length)h+=`<div class="empty">${S.view==='today'?'오늘 복습할 단어가 없어요 🎉<br>책에서 새 쪽을 공부하고 □칸을 채워 보세요.<br>1일 뒤, 3일 뒤에 여기로 다시 나와요.':'모르는 단어가 없어요.<br>헷갈리는 단어는 번호 아래 <b>모름</b>을 눌러 담아 두세요.<br>즉시반응에서 ‘못 했어요’를 누른 단어도 여기로 와요.'}</div>`;
+    else{
+      if(S.view==='today')h+=`<div class="lst-h">책의 <b>4. 다음 날</b>: 전날 헷갈린 단어부터 다시 만나요. 기억나면 □칸을 톡!</div>`;
+      L.slice(lp*5,lp*5+5).forEach(n=>{const w=byN(n);h+=`<div class="lst-h" style="margin-top:10px">${pageOf(n)}쪽 · 구간 ${p2(secOf(n))}</div>`+entHTML(w)});
+      h+=`<div class="pn">${lp+1} / ${pages}</div>`;
+    }
+  }
+  P.innerHTML=h;navUI();
+}
+function navUI(){
+  if(S.view==='book'){$('prev').disabled=S.page<=FIRST;$('next').disabled=S.page>=LAST;
+    const s=Math.floor((S.page-FIRST)/10)+1;$('pgBtn').innerHTML=`— ${S.page} —<small>구간 ${p2(s)} · 쪽 이동 ▾</small>`}
+  else{const L=curList(),pages=Math.max(1,Math.ceil(L.length/5)),lp=S.lp[S.view]||0;$('prev').disabled=lp<=0;$('next').disabled=lp>=pages-1;
+    $('pgBtn').innerHTML=`${lp+1} / ${pages}<small>${S.view==='today'?'오늘 복습':'모르는 단어'}</small>`}
+}
+function turn(d){
+  if(S.view==='book'){const p=S.page+d;if(p<FIRST||p>LAST)return;S.page=p}
+  else{const L=curList(),pages=Math.max(1,Math.ceil(L.length/5));const lp=(S.lp[S.view]||0)+d;if(lp<0||lp>=pages)return;S.lp[S.view]=lp}
+  save();render();scrollTo(0,0);
+}
+function goPage(p){S.view='book';S.page=Math.max(FIRST,Math.min(LAST,p));save();render();scrollTo(0,0)}
+$('prev').onclick=()=>turn(-1);$('next').onclick=()=>turn(1);
+document.querySelector('.tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;S.view=b.dataset.v;save();render();scrollTo(0,0)};
+addEventListener('keydown',e=>{if(introOn||$('ov').classList.contains('show'))return;
+  if(e.key==='ArrowLeft')turn(-1);if(e.key==='ArrowRight')turn(1);
+  if(e.code==='Space'){e.preventDefault();document.body.classList.add(holdCls())}});
+addEventListener('keyup',e=>{if(e.code==='Space')unhideAll()});
+
+/* ---------- 꾹 누르기(가리기) · 톡 · 넘기기 ---------- */
+let pressT=0,holdTimer=null,sx=0,sy=0,moved=false,swiping=false;
+function pressStart(x,y){pressT=Date.now();sx=x;sy=y;moved=false;swiping=false;clearTimeout(holdTimer);holdTimer=setTimeout(()=>{if(!swiping)document.body.classList.add(holdCls())},140)}
+function pressEnd(){clearTimeout(holdTimer);unhideAll()}
+const P=$('page');
+P.addEventListener('touchstart',e=>{const t=e.touches[0];pressStart(t.clientX,t.clientY)},{passive:true});
+P.addEventListener('touchmove',e=>{const t=e.touches[0],dx=t.clientX-sx,dy=t.clientY-sy;
+  if(Math.abs(dx)+Math.abs(dy)>10)moved=true;
+  if(!swiping&&Math.abs(dx)>18&&Math.abs(dx)>Math.abs(dy)*1.3){swiping=true;pressEnd()}},{passive:true});
+P.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;pressEnd();
+  if(swiping&&Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.3)turn(dx<0?1:-1)});
+P.addEventListener('touchcancel',pressEnd);
+P.addEventListener('mousedown',e=>{if(e.button===0)pressStart(e.clientX,e.clientY)});
+addEventListener('mouseup',pressEnd);
+addEventListener('contextmenu',e=>{if(e.target.closest('#page'))e.preventDefault()});
+P.addEventListener('click',e=>{
+  if(Date.now()-pressT>300||moved)return;
+  const t=e.target;
+  const u=t.closest('[data-u]');if(u){const n=+u.dataset.u,on=toggleUnk(n);toast(on?'모르는 단어에 담았어요':'모르는 단어에서 뺐어요');
+    if(S.view!=='book')render();else{u.classList.toggle('on',on);counts()}return}
+  const bx=t.closest('[data-bx]');if(bx){const n=+bx.dataset.bx;if(!undoBox(n))fillBox(n);if(S.view==='today')render();else{bx.innerHTML=boxHTML(n);counts()}return}
+  const cr=t.closest('[data-say]');if(cr){const[n,i]=cr.dataset.say.split(':');speak(byN(+n).c[+i][0]);return}
+  const o=t.closest('[data-open]');if(o)openWord(+o.dataset.open);
+});
+/* 꾹 누르기 버튼 2개: 한자만(병음·뜻 가림) / 한국어만(한자·병음 가림) */
+const HOLD={zh:{cls:'hiding',l1:'<i>汉</i>한자만',l2:'꾹 · 뜻 떠올리기'},ko:{cls:'hidezh',l1:'<i>가</i>한국어만',l2:'꾹 · 중국어로 말하기'}};
+const holdCls=()=>HOLD[S.holdMode==='ko'?'ko':'zh'].cls;
+function unhideAll(){document.body.classList.remove('hiding','hidezh')}
+document.querySelectorAll('.hold').forEach(b=>{
+  const m=b.dataset.mode,l1=b.querySelector('.hl1'),l2=b.querySelector('.hl2');
+  if(!S.usedHold)b.classList.add('new');
+  const on=e=>{e.preventDefault();try{b.setPointerCapture(e.pointerId)}catch(_){}
+    unhideAll();document.body.classList.add(HOLD[m].cls);b.classList.add('on');
+    document.querySelectorAll('.hold').forEach(x=>x.classList.remove('new'));
+    l1.textContent='떠올려 보세요…';l2.textContent='손을 떼면 정답!';
+    S.holdMode=m;S.usedHold=true;save()};
+  const off=()=>{if(!b.classList.contains('on'))return;unhideAll();b.classList.remove('on');l1.innerHTML=HOLD[m].l1;l2.textContent=HOLD[m].l2};
+  b.addEventListener('pointerdown',on);['pointerup','pointercancel','lostpointercapture'].forEach(t=>b.addEventListener(t,off));
+  b.addEventListener('contextmenu',e=>e.preventDefault());
+});
+function toggleUnk(n,force){const on=force!==undefined?force:!unk.has(n);on?unk.add(n):unk.delete(n);S.unk=[...unk];save();return on}
+
+/* ---------- 시트 ---------- */
+const ov=$('ov'),sh=$('sheet');let T=null;
+function openSheet(html){sh.innerHTML=html;ov.classList.add('show');sh.scrollTop=0}
+function closeSheet(){stopTest();T=null;ov.classList.remove('show');try{speechSynthesis.cancel()}catch(e){}render()}
+ov.addEventListener('click',e=>{if(e.target===ov)closeSheet()});
+const X='<button class="x" data-close>✕</button>';
+sh.addEventListener('click',e=>{
+  const t=e.target.closest('button');if(!t)return;
+  if(t.hasAttribute('data-close'))return closeSheet();
+  if(t.dataset.say){const[n,i]=t.dataset.say.split(':');const w=byN(+n);speak(i==='h'?w.h:w.c[+i][0]);return}
+  if(t.dataset.act)ACT[t.dataset.act](t);
+});
+sh.addEventListener('input',e=>{if(e.target.dataset.mine){const n=e.target.dataset.mine,v=e.target.value;v.trim()?S.mine[n]=v:delete S.mine[n];save()}});
+
+function boxStatus(n){const b=boxes(n);if(b.length>=3)return '3칸 완료! 이제 내 단어예요';
+  if(!b.length)return '기억해 내면 첫 칸을 채워요';
+  const d=nextDue(n);return isDue(n)?'오늘 다음 칸을 채울 수 있어요':`다음 칸은 ${mdK(d)}부터`}
+function openWord(n){
+  const w=byN(n);
+  openSheet(`<div class="shd"><span>${pad(n)} · ${pageOf(n)}쪽 · 구간 ${p2(secOf(n))}</span>${X}</div>
+  <div class="wc"><div class="h">${esc(w.h)}</div><div class="p">${esc(w.p)}</div><div class="k">${esc(w.k)}</div>
+   <div class="acts"><button class="pill" data-say="${n}:h">🔊 발음 듣기</button><button class="pill${unk.has(n)?' on':''}" data-act="wunk" data-n="${n}">${unk.has(n)?'모름 ✓':'모름'}</button><button class="pill" data-act="wbox" data-n="${n}">□ 기억해 냈어요</button></div>
+   <div class="boxline"><span class="bx">${boxHTML(n)}</span><span>${boxStatus(n)}</span></div></div>
+  <div class="sec-t">짝꿍어휘 ①②③</div>
+  <div class="cb">${w.c.map((c,i)=>`<button class="cr" style="width:100%;text-align:left" data-say="${n}:${i}"><span class="ci">${'①②③'[i]}</span><span class="ch">${rich(c[0],w.h)} 🔊</span><span class="cp">${esc(c[1])}</span><span class="ck">${esc(c[2])}</span></button>`).join('')}</div>
+  <button class="btn" data-act="wtest" data-n="${n}">짝꿍어휘 테스트 하기<small>3개 중 하나씩 랜덤 · 듣거나 뜻을 보고 ${S.limit}초 안에 말하기</small></button>
+  <div class="sec-t">2. 내 문장 <span style="color:var(--mut);font-weight:600">· 마음에 드는 짝꿍어휘 1~2개로</span></div>
+  <textarea class="mine cn" data-mine="${n}" placeholder="예) 我每天早上${esc(plain(w.c[0][0]).replace(/[？?]/g,''))}。">${esc(S.mine[n]||'')}</textarea>
+  <div class="note" style="margin-top:4px">소리 내어 읽어 보고, 수업 때 선생님께 보여 드려요.</div>`);
+}
+
+/* ---------- 즉시반응 테스트 ---------- */
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startTest(q,kind,title){T={q,kind,title,total:q.length,pass:0,failed:new Set(),filled:0,timers:[],lastN:q[0].n};runItem()}
+function stopTest(){if(T){T.timers.forEach(clearTimeout);T.timers=[]}}
+function later(f,ms){const id=setTimeout(f,ms);T.timers.push(id);return id}
+function head(){
+  let pr='';if(T.kind==='word'){for(let k=0;k<T.total;k++)pr+=`<span class="${k<T.pass?'d':''}"></span>`;pr=`<div class="prog">${pr}</div>`}
+  else pr=`<div class="sub" style="margin:0 0 8px;text-align:center">${T.pass+1} / ${T.total}</div>`;
+  return `<div class="shd"><span>${esc(T.title)}</span>${X}</div>`+pr}
+function runItem(){
+  stopTest();const it=T.q[0],w=byN(it.n),c=w.c[it.i];
+  if(!it.mode)it.mode=(ttsOK()&&Math.random()<.5)?'listen':'read';
+  const L=it.mode==='listen';
+  openSheet(head()+`<div class="tbox"><div class="mode">${L?'🎧 듣고 한국어 뜻 말하기':'👀 뜻 보고 중국어로 말하기'}</div>
+    ${L?`<div class="ear">🎧</div><div class="sub">잘 듣고, 소리 내어 뜻을 말해 보세요</div>`:`<div class="prompt">${esc(c[2])}</div><div class="sub">소리 내어 중국어로 말해 보세요</div>`}
+    <div class="tb"><div id="tbar"></div></div><div class="secn" id="tsec">${L?'듣는 중…':S.limit}</div></div>
+  <div class="two">${L?`<button class="b" data-act="replay">🔊 다시 듣기</button>`:''}<button class="b ${L?'':'full'}" data-act="reveal">정답 보기</button></div>`);
+  if(L)later(()=>speak(c[0],()=>T&&T.q[0]===it&&!it.revealed&&countdown()),250);else later(countdown,350);
+}
+function countdown(){
+  const it=T.q[0];if(it.counting)return;const bar=$('tbar'),sec=$('tsec');if(!bar)return;it.counting=true;
+  bar.style.transition='none';bar.style.width='100%';bar.offsetWidth;bar.style.transition=`width ${S.limit}s linear`;bar.style.width='0%';
+  let left=S.limit;sec.textContent=left;const tick=()=>{left--;if(left>0){sec.textContent=left;later(tick,1000)}else reveal()};later(tick,1000);
+}
+function reveal(){
+  stopTest();const it=T.q[0];it.revealed=true;const w=byN(it.n),c=w.c[it.i];
+  openSheet(head()+`<div class="tbox ans"><div class="mode">정답</div>
+    <div class="c">${rich(c[0],w.h)}</div><div class="cp2">${esc(c[1])}</div><div class="ck2">${esc(c[2])}</div>
+    <div class="sub" style="margin-top:12px">${pad(w.n)} <span class="cn" style="font-weight:800;color:var(--ink)">${esc(w.h)}</span> ${esc(w.p)} · ${esc(w.k)} · ${pageOf(w.n)}쪽</div>
+    <div style="margin-top:8px"><button class="pill" data-say="${it.n}:${it.i}">🔊 한 번 더 듣기</button></div></div>
+  <div class="sub" style="text-align:center;margin-top:12px">${S.limit}초 안에 말할 수 있었나요?</div>
+  <div class="two"><button class="b re" data-act="fail">↻ 못 했어요 · 다시</button><button class="b ok" data-act="pass">✓ 말했어요</button></div>`);
+  speak(c[0]);
+}
+function finish(){
+  stopTest();const re=T.failed.size;
+  openSheet(`<div class="shd"><span>${esc(T.title)}</span>${X}</div>
+  <div class="tbox"><div style="font-size:46px">🎉</div><div class="prompt" style="margin-top:6px">${T.total}개 모두 통과!</div>
+  <div class="sub">${T.filled?`기억 칸 ${T.filled}개를 채웠어요 · 책의 같은 번호에도 칠해 두세요<br>`:''}${re?`다시 도전한 단어 ${re}개는 ‘모르는 단어’에 담았어요 · 소리 내어 2번 따라 말해요`:'한 번에 모두 말했어요!'}</div></div>
+  <div class="two">${T.kind==='word'?`<button class="b" data-act="back">단어로 돌아가기</button><button class="b ok" data-act="again">한 번 더</button>`:`<button class="b" data-close>책으로</button><button class="b ok" data-act="again">새로 섞어서 한 번 더</button>`}</div>`);
+}
+const ACT={
+  replay(){const it=T.q[0];speak(byN(it.n).c[it.i][0],()=>T&&!it.revealed&&countdown())},
+  reveal,
+  pass(){const it=T.q.shift();T.pass++;T.lastN=it.n;
+    // 즉시반응에서 한 번에 말한 단어는 칸을 채움 (다시 도전한 단어는 다음에)
+    if(T.kind==='speed'&&!T.failed.has(it.n)&&isDue(it.n)&&fillBox(it.n,true))T.filled++;
+    if(T.kind==='word'&&!T.q.length&&!T.failed.size&&isDue(it.n)&&fillBox(it.n,true))T.filled++;
+    T.q.length?runItem():finish()},
+  fail(){const it=T.q[0];T.failed.add(it.n);
+    if(!unk.has(it.n)){toggleUnk(it.n,true);toast('모르는 단어에 담았어요 · 다시 해 봐요')}else toast('괜찮아요, 익숙해질 때까지 다시 만나요');
+    T.q[0]={n:it.n,i:it.i};runItem()},
+  back(){openWord(T.lastN)},
+  again(){if(T.kind==='word'){const n=T.lastN;startTest(shuffle([0,1,2]).map(i=>({n,i})),'word','짝꿍어휘 테스트 · '+byN(n).h)}else startSpeed(T.scope)},
+  wunk(t){const n=+t.dataset.n,on=toggleUnk(n);t.classList.toggle('on',on);t.textContent=on?'모름 ✓':'모름'},
+  wbox(t){const n=+t.dataset.n;fillBox(n);const bl=sh.querySelector('.boxline');if(bl)bl.innerHTML=`<span class="bx">${boxHTML(n)}</span><span>${boxStatus(n)}</span>`},
+  wtest(t){const n=+t.dataset.n;startTest(shuffle([0,1,2]).map(i=>({n,i})),'word','짝꿍어휘 테스트 · '+byN(n).h)},
+  scope(t){startSpeed(t.dataset.s)},
+  jumpsec(t){closeSheet();goPage(secFirstPage(+t.dataset.s))},
+  jump(){const v=$('jv').value.trim();const m=v.match(/^(\d+)$/);if(!m)return toast('쪽 번호나 단어 번호를 넣어 주세요');
+    const x=+m[1];closeSheet();if(x>=FIRST&&x<=LAST&&v.length<=3)goPage(x);else if(x>=1&&x<=NW)goPage(pageOf(x));else toast(`${FIRST}~${LAST}쪽, 단어는 1~${NW}번이에요`)},
+  dt(t){const s=t.dataset.s,k=+t.dataset.k;const a=(S.prog[s]||[null,null,null]).slice();
+    if(a[k]){if(t.dataset.sure){a[k]=null;}else{t.dataset.sure=1;t.textContent='지울까요?';return}}else a[k]=today();
+    S.prog[s]=a;save();openProg()},
+  lim(t){S.limit=+t.dataset.v;save();openSettings()},
+  slow(t){S.slow=t.dataset.v==='1';save();openSettings();speak('你好')},
+  clr(t){if(t.dataset.sure){unk.clear();S.unk=[];save();openSettings();toast('모르는 단어를 비웠어요')}else{t.dataset.sure=1;t.textContent='정말 비울까요?'}},
+  reset(t){if(t.dataset.sure){const keep={limit:S.limit,slow:S.slow,seenGuide:true};S={view:'book',page:10,unk:[],box:{},start:{},prog:{},mine:{},lp:{today:0,unk:0},...keep};unk=new Set();save();closeSheet();toast('공부 기록을 모두 지웠어요')}else{t.dataset.sure=1;t.textContent='정말 지울까요? 한 번 더'}},
+  guideDone(){S.seenGuide=true;save();closeSheet()}
+};
+function startSpeed(scope){
+  let ns,title;
+  if(scope==='page'){const a=(S.page-FIRST)*5+1;ns=[a,a+1,a+2,a+3,a+4];title=`⚡ 즉시반응 · ${S.page}쪽`}
+  else if(scope==='sec'){const s=Math.floor((S.page-FIRST)/10)+1;ns=[];for(let n=(s-1)*50+1;n<=s*50;n++)ns.push(n);title=`⚡ 즉시반응 · 구간 ${p2(s)}`}
+  else{ns=curList();title=`⚡ 즉시반응 · ${S.view==='today'?'오늘 복습':'모르는 단어'}`}
+  if(!ns.length)return toast('테스트할 단어가 없어요');
+  startTest(shuffle(ns.slice()).map(n=>({n,i:Math.floor(Math.random()*3)})),'speed',title);T.scope=scope;
+}
+$('goTest').onclick=()=>{
+  if(S.view!=='book')return startSpeed('list');
+  const s=Math.floor((S.page-FIRST)/10)+1;
+  openSheet(`<div class="shd"><span>⚡ 즉시반응 테스트</span>${X}</div>
+  <div class="how">짝꿍어휘가 <b>소리</b>로 나오거나 <b>한국어 뜻</b>으로 나와요. ${S.limit}초 안에 소리 내어 말해 보세요.<br>한 번에 말한 단어는 기억 칸 □이 채워져요.</div>
+  <button class="btn" data-act="scope" data-s="page">이 쪽 5단어<small>${S.page}쪽 · ${pad((S.page-FIRST)*5+1)} – ${pad((S.page-FIRST)*5+5)}</small></button>
+  <button class="btn w" data-act="scope" data-s="sec">구간 ${p2(s)} 전체 50단어<small style="color:var(--gr)">3. 폰 카드 · 틈틈이 같은 구간 떠올리기</small></button>`);
+};
+
+/* ---------- 쪽 이동 ---------- */
+$('pgBtn').onclick=()=>{
+  if(S.view!=='book'){S.view='book';save();render();return}
+  const cs=Math.floor((S.page-FIRST)/10)+1;let g='';
+  for(let s=1;s<=NSEC;s++){const lh=lvHead(s);if(lh)g+=`<div class="sec-t" style="grid-column:1/-1;${s===1?'margin-top:0':''}">${lh}</div>`;
+    g+=`<button class="${s===cs?'cur':''}" data-act="jumpsec" data-s="${s}">구간 ${p2(s)} <small>${secFirstPage(s)}쪽 · ${pad((s-1)*50+1)} – ${pad(s*50)}</small></button>`}
+  openSheet(`<div class="shd"><span>쪽 이동 · 책과 같은 쪽을 펼쳐요</span>${X}</div><div class="jump">${g}</div>
+  <div class="jin"><input id="jv" inputmode="numeric" placeholder="쪽 번호(${FIRST}~${LAST}) 또는 단어 번호(0001~${pad(NW)})"><button data-act="jump">이동</button></div>
+  <div class="note">${CFG.jumpEx}</div>`);
+};
+
+/* ---------- 나의 진도표 · 내 공부 현황 ---------- */
+function fruit(pct,id){return CFG.fruit==='fig'?fig(pct,id):kiwi(pct,id)}
+function fig(pct,id){const y=6+26*(1-pct);return `<svg width="26" height="32" viewBox="0 0 26 34"><defs><clipPath id="k${id}"><rect x="0" y="${y}" width="26" height="34"/></clipPath></defs>
+  <path d="M13 5C8 11 2.5 17 3 24c.4 5 4.6 8 10 8s9.6-3 10-8C23.5 17 18 11 13 5Z" fill="#f3e6ee" stroke="#6b3270" stroke-width="1.6"/><path d="M13 6.6C8.6 12 4 17.4 4.4 24c.4 4.2 4 6.7 8.6 6.7s8.2-2.5 8.6-6.7C22 17.4 17.4 12 13 6.6Z" fill="#dc5a6e" clip-path="url(#k${id})"/>
+  <path d="M13 5c0-2 1.6-3.2 3-3" stroke="#5f9e2f" stroke-width="1.6" fill="none"/></svg>`}
+function kiwi(pct,id){const h=30,y=4+(h-4)*(1-pct);return `<svg width="26" height="32" viewBox="0 0 26 34"><defs><clipPath id="k${id}"><rect x="0" y="${y}" width="26" height="34"/></clipPath></defs>
+  <ellipse cx="13" cy="18" rx="10.5" ry="14" fill="#efe6cf" stroke="#8a6a3b" stroke-width="1.6"/><ellipse cx="13" cy="18" rx="9.4" ry="12.9" fill="#7cbf3a" clip-path="url(#k${id})"/>
+  <ellipse cx="13" cy="18" rx="3.2" ry="5" fill="#fff8df" opacity=".9"/><path d="M13 3.5c0-1.5 1.5-2.4 2.6-2" stroke="#8a6a3b" stroke-width="1.4" fill="none"/></svg>`}
+function openProg(){
+  let known=0,done=0;W.forEach(w=>{const k=boxes(w.n).length;if(k)known++;if(k>=3)done++});
+  let rows='';
+  for(let s=1;s<=NSEC;s++){
+    const lh=lvHead(s);if(lh)rows+=`<tr class="lvr"><td colspan="6"><span>${lh}</span></td></tr>`;
+    let f=0;for(let n=(s-1)*50+1;n<=s*50;n++)f+=boxes(n).length;const pct=f/150;
+    const a=S.prog[s]||[];
+    rows+=`<tr><td>구간 ${p2(s)}<small>${pad((s-1)*50+1)} – ${pad(s*50)}</small></td><td>${secFirstPage(s)}쪽</td>${[0,1,2].map(k=>`<td><button class="dt${a[k]?' f':''}" data-act="dt" data-s="${s}" data-k="${k}">${a[k]?md(a[k]):'__/__'}</button></td>`).join('')}
+    <td><div class="kw">${fruit(pct,s)}${pct>=1?'완료!':Math.round(pct*100)+'%'}</div></td></tr>`;
+  }
+  openSheet(`<div class="shd"><span>나의 진도표 · 내 공부 현황</span>${X}</div>
+  <div class="stats"><div class="st"><b>${known}</b><span>외운 단어(1칸↑)</span></div><div class="st"><b>${done}</b><span>3칸 완료</span></div><div class="st"><b>${todayList().length}</b><span>오늘 복습할 단어</span></div></div>
+  <table class="pt"><tr><th>구간</th><th>쪽</th><th>1회</th><th>2회</th><th>3회</th><th>${CFG.fruitName}</th></tr>${rows}</table>
+  <div class="note">· 책으로 한 구간을 공부하면 1회·2회·3회 칸을 톡 눌러 오늘 날짜를 남겨요.<br>· ${CFG.fruitName}${CFG.fruitJosa} □칸이 채워질수록 아래부터 ${CFG.fruitColor}으로 익어요. ${CFG.progNote}</div>`);
+}
+$('bProg').onclick=openProg;
+
+/* ---------- 이렇게 공부해요 ---------- */
+function openGuide(){
+  openSheet(`<div class="shd"><span>이렇게 공부해요${CFG.guideRef}</span>${X}</div>
+  <div class="g-h"><i>1</i>마인드 세팅하기</div>
+  <div class="flow"><div class="a">① 짝꿍어휘<small>이 책·앱에서 시작!</small></div><div>② 입에 붙이기</div><div>③ 내 문장</div><div class="z">④ 즉시반응<small>목표!</small></div></div>
+  <p class="gp">처음부터 다 외우려고 하지 않아도 괜찮아요. 눈으로 보고 소리 내어 따라 하며 입에 붙이고, 내 이야기로 문장을 만들어 보세요. 한국어를 보자마자 중국어가 1초 안에 툭! 나오는 즉시반응을 향해 가볍게 시작해요.</p>
+  <div class="g-h"><i>2</i>하루 공부 순서</div>
+  <div class="steps"><div><b>1. 책 펼치기</b>오늘 구간의 짝꿍어휘를 소리 내어 읽기 · 앱에서 ①②③을 톡 눌러 들어요</div><div><b>2. 내 문장</b>마음에 드는 짝꿍어휘 1~2개로 문장 만들기 · 단어를 톡 → 내 문장 칸</div><div><b>3. 폰 카드</b>틈틈이 같은 구간 떠올리기 · 汉 한자만 · 가 한국어만 버튼을 꾹 누르고 떠올린 뒤 손을 떼서 확인, ⚡ 즉시반응</div><div><b>4. 다음 날</b>전날 헷갈린 단어부터 다시 만나기 · ‘오늘 복습’ 탭</div></div>
+  <div class="g-h"><i>3</i>책과 앱 동기화하기</div>
+  <div class="three"><div><b>첫날</b>처음 기억해 낸 날 한 칸</div><div><b>1일 뒤</b>다음 날 다시 기억해 내면 두 칸</div><div><b>3일 뒤</b>3일 뒤 또 기억해 내면 완료!</div></div>
+  <p class="gp">앱에서 칸이 채워지면 책의 같은 번호에도 똑같이 칠해 두세요. 3칸이 모두 찬 단어는 이제 내 단어예요. 아직 못 채운 칸은 다시 만날 기회예요.</p>
+  <div class="g-h"><i>✓</i>앱 사용법</div>
+  <div class="how"><b>쪽 번호</b> 아래 가운데 ‘— 10 —’을 누르면 책과 같은 쪽으로 이동해요. 옆으로 밀면 쪽이 넘어가요.<br>
+  <b>汉 한자만</b> 누르고 있는 동안 병음·뜻이 사라져요. 한자를 보고 뜻을 떠올려요(중국어 → 한국어).<br><b>가 한국어만</b> 누르고 있는 동안 한자·병음이 사라져요. 뜻을 보고 중국어로 말해요(한국어 → 중국어). 말하기 연습엔 이쪽을 추천해요. 덩어리훈련 ④ 즉시반응 훈련이 돼요.<br>손을 떼면 정답 확인! 화면 아무 곳을 꾹 눌러도 마지막에 쓴 방식으로 가려져요.<br>
+  <b>①②③ 톡</b> 짝꿍어휘 발음(Tingting)을 들어요.<br>
+  <b>□□□ 톡</b> 기억해 냈으면 칸을 채워요. 오늘 채운 칸을 다시 누르면 지워져요.<br>
+  <b>단어 톡</b> 발음 듣기 · 짝꿍어휘 테스트(${S.limit}초) · 내 문장 쓰기<br>
+  <b>모름</b> 헷갈리는 단어를 모아 ‘모르는 단어’ 탭에서 다시 봐요.</div>
+  <div class="note">· 꼭 크롬으로 열어 주세요. 카카오톡·인스타그램 앱 안에서 열면 발음이 안 나오거나 기록이 저장되지 않을 수 있어요.<br>· 공부 기록은 이 기기의 이 브라우저에 저장돼요. 늘 같은 기기·같은 브라우저로 열어 주세요.</div>
+  <button class="btn" data-act="guideDone">시작하기</button>`);
+}
+$('bGuide').onclick=openGuide;
+
+/* ---------- 설정 ---------- */
+function openSettings(){
+  const vname=voice?voice.name+(/ting/i.test(voice.name)?' ✓':' (Tingting 없음 → 다른 여자 목소리)'):'중국어 음성 없음';
+  openSheet(`<div class="shd"><span>설정</span>${X}</div>
+  <div class="setrow"><span>즉시반응 제한 시간</span><div class="opts">${[3,2,1].map(s=>`<button data-act="lim" data-v="${s}" class="${S.limit===s?'on':''}">${s}초</button>`).join('')}</div></div>
+  <div class="setrow"><span>발음 속도</span><div class="opts"><button data-act="slow" data-v="0" class="${!S.slow?'on':''}">보통</button><button data-act="slow" data-v="1" class="${S.slow?'on':''}">천천히</button></div></div>
+  <div class="setrow"><span>중국어 목소리</span><span style="font-size:12px;color:var(--gr);text-align:right">${esc(vname)}</span></div>
+  <div class="setrow"><span>모르는 단어 ${unk.size}개</span><div class="opts"><button data-act="clr">모두 비우기</button></div></div>
+  <div class="setrow"><span>공부 기록 전체</span><div class="opts"><button data-act="reset">처음부터</button></div></div>
+  <p class="note">· Tingting(婷婷) 목소리는 아이폰·아이패드·맥에 들어 있어요. 안드로이드·윈도우에서는 기기에 있는 다른 여자 중국어 목소리로 읽어요.<br>${CFG.lvmark?'· 점선 밑줄과 작은 숫자(예: 辆<sup>3</sup>)는 3급 이상 단어예요. 지금은 덩어리째 소리 내어 익혀 두면 충분해요.<br>':''}· 《${CFG.book}》 전진아 · 진담중국어</p>`);
+}
+$('bSet').onclick=openSettings;
+
+let tt;function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),1800)}
+/* ---------- 인트로: 아무 키나 눌러 주세요 ---------- */
+let introOn=true;
+function startApp(e){
+  if(!introOn)return;introOn=false;
+  if(e&&e.preventDefault)e.preventDefault();
+  // iOS는 첫 터치 때 음성을 깨워 둬야 이후 발음이 나와요
+  try{if('speechSynthesis' in window){const u=new SpeechSynthesisUtterance(' ');u.volume=0;speechSynthesis.speak(u)}}catch(err){}
+  const I=$('intro');I.classList.add('go');
+  setTimeout(()=>{I.remove();if(!S.seenGuide)openGuide()},900);
+}
+$('intro').addEventListener('pointerdown',startApp);
+addEventListener('keydown',e=>{if(introOn)startApp(e)},true);
+/* ---------- 앱 안 브라우저 안내 ---------- */
+(function(){
+  if(!window.__INAPP)return;
+  const ua=navigator.userAgent,url=location.href.split('#')[0],rest=url.replace(/^https?:\/\//,'');
+  const android=/Android/i.test(ua),kakao=/KAKAOTALK/i.test(ua);
+  const box=$('inapp');$('iaUrl').textContent=url;
+  $('iaHow').innerHTML=`<div class="how" style="margin:0;padding:10px 12px;background:#fff;border-radius:12px;font-size:13px;line-height:1.7">
+   ${kakao?'<b>카카오톡</b>: 오른쪽 아래(또는 위) <b>⋮ · 공유</b> 버튼 → <b>다른 브라우저로 열기</b>':'<b>인스타그램 등</b>: 오른쪽 위 <b>⋯</b> 버튼 → <b>외부 브라우저로 열기</b>'}<br>
+   또는 주소를 복사해서 <b>크롬</b> 주소창에 붙여 넣어도 돼요.</div>`;
+  box.classList.add('show');
+  $('iaOpen').onclick=()=>{
+    if(android)location.href='intent://'+rest+'#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url='+encodeURIComponent(url+'#stay')+';end';
+    else location.href='googlechromes://'+rest;
+    if(kakao)setTimeout(()=>{if(!document.hidden)location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(url)},1600);
+  };
+  $('iaCopy').onclick=async()=>{
+    let ok=false;try{await navigator.clipboard.writeText(url);ok=true}catch(e){}
+    if(!ok){try{const t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove()}catch(e){}}
+    toast(ok?'주소를 복사했어요 · 크롬 주소창에 붙여 넣어 주세요':'주소를 길게 눌러 복사해 주세요');
+  };
+  $('iaStay').onclick=()=>box.classList.remove('show');
+})();
+render();
+if(S.migrated&&!S.migrateToast){S.migrateToast=true;save();setTimeout(()=>toast('지난 기록(체크 칸·다시 볼 단어)을 옮겨 왔어요'),1500)}
+</script>
 </body>
 </html>
